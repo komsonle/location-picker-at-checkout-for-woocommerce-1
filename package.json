@@ -10,7 +10,8 @@
   },
   "scripts": {
     "dev": "parcel watch --no-hmr",
-    "build": "parcel build --no-cache",
+    "___build": "parcel build --no-cache",
+    "build": "parcel build --no-cache --no-optimize --no-scope-hoist",
     "format": "prettier --write ./assets/**/* --no-error-on-unmatched-pattern",
     "prepare": "husky install"
   },
@@ -38,32 +39,6 @@
       ],
       "sourceMap": false,
       "distDir": "./assets/public/js/maps/build/"
-    },
-    "pro-maps": {
-      "source": [
-        "./assets/pro/public/js/maps/checkout-page-map-pro.js"
-      ],
-      "sourceMap": false,
-      "distDir": "./assets/pro/public/js/maps/build/"
-    },
-    "pro-admin": {
-      "source": [
-        "./assets/pro/admin/js/lpac-admin-pro.js",
-        "./assets/pro/admin/js/shipping-settings.js",
-        "./assets/pro/admin/js/draw-shipping-zones.js",
-        "./assets/pro/admin/js/export-settings.js",
-        "./assets/pro/admin/js/plot-orders.js",
-        "./assets/pro/admin/js/map-builder/map-builder.js"
-      ],
-      "sourceMap": false,
-      "distDir": "./assets/pro/admin/js/build/"
-    },
-    "pro-public": {
-      "source": [
-        "./assets/pro/public/js/kikote-map-builder.js"
-      ],
-      "sourceMap": false,
-      "distDir": "./assets/pro/public/js/build/"
     }
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",

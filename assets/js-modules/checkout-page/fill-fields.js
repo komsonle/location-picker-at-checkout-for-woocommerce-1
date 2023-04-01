@@ -67,7 +67,7 @@ export function fillShippingFields(results) {
     return;
   }
 
-  fillStreetAddress1(results, "shipping");
+  // fillStreetAddress1(results, "shipping");
   fillCountryRegion(results, "shipping");
   fillTownCity(results, "shipping");
   fillStateCounty(results, "shipping");
@@ -89,7 +89,7 @@ export function fillBillingFields(results) {
     return;
   }
 
-  fillStreetAddress1(results, "billing");
+  // fillStreetAddress1(results, "billing");
   fillCountryRegion(results, "billing");
   fillTownCity(results, "billing");
   fillStateCounty(results, "billing");
@@ -169,7 +169,7 @@ function fillStateCounty(results, type) {
     }
 
     if (state_field.classList.contains("select2-hidden-accessible")) {
-      state_field.value = addressComponent.getStateCounty(results).short_name;
+      state_field.value = addressComponent.getStateCounty(results).long_name;
 
       state_field.dispatchEvent(new Event("change", { bubbles: true })); // ensure Select2 sees the change
     } else {
